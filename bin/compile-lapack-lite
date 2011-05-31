@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SRC=$1
+
+cd $SRC
+cat INSTALL/make.inc.LINUX | sed s/g77/gfortran/ > make.inc
+make -k blaslib lapacklib
